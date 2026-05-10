@@ -58,7 +58,9 @@ We retain information for as long as necessary to provide our services, resolve 
 
 ## 7. Your Choices
 
-You may request access to or correction of your personal information by contacting us at [Support Email]. You may also request account deletion, subject to legal, transactional, and operational retention requirements.
+You may request access to or correction of your personal information by contacting us at trimora.salon@gmail.com. You may also request account deletion, subject to legal, transactional, and operational retention requirements.
+
+**Account Recovery**: If you have deleted your account and wish to recover it or have questions regarding a deleted account, please contact us at **trimora.salon@gmail.com**.
 
 ## 8. Security
 

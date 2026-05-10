@@ -413,6 +413,7 @@ function renderPrivacyPolicyPage() {
 
         <h2>7. Your Choices</h2>
         <p>You may request access to or correction of your personal information by contacting us at <a href="mailto:${c.supportEmail}">${c.supportEmail}</a>. You may also request account deletion, subject to legal, transactional, and operational retention requirements.</p>
+        <p><strong>Account Recovery:</strong> If you have deleted your account and wish to recover it or have questions regarding a deleted account, please contact us at <a href="mailto:${c.supportEmail}"><strong>${c.supportEmail}</strong></a>.</p>
 
         <h2>8. Security</h2>
         <p>We use reasonable technical and organizational measures to protect your information. However, no online platform can guarantee absolute security.</p>
