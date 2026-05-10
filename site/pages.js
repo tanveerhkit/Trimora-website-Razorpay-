@@ -423,10 +423,23 @@ function renderPrivacyPolicyPage() {
         <h2>10. Children's Privacy</h2>
         <p>Trimora is not intended for children under the age of 18 without lawful guardian supervision, where applicable.</p>
 
-        <h2>11. Changes to This Policy</h2>
+        <h2>11. App Permissions (Android)</h2>
+        <p>To provide a full-featured experience, the Trimora Android application may request the following permissions:</p>
+        <ul>
+          <li><strong>INTERNET</strong>: Needed for API calls and platform communication.</li>
+          <li><strong>ACCESS_COARSE_LOCATION & ACCESS_FINE_LOCATION</strong>: Needed to show nearby salons and enable location-based features.</li>
+          <li><strong>CAMERA</strong>: Needed for scanning QR codes and capturing images within the app.</li>
+          <li><strong>POST_NOTIFICATIONS</strong>: Needed to send push notifications for bookings, updates, and promotions.</li>
+          <li><strong>READ_EXTERNAL_STORAGE & WRITE_EXTERNAL_STORAGE</strong>: Legacy storage permissions needed for handling file uploads or saving app-related data.</li>
+          <li><strong>RECORD_AUDIO & MODIFY_AUDIO_SETTINGS</strong>: Requested for audio-related features within the platform.</li>
+          <li><strong>SYSTEM_ALERT_WINDOW</strong>: Requested for specific overlay features required by app functions.</li>
+          <li><strong>VIBRATE</strong>: Used for tactile feedback and notifications.</li>
+        </ul>
+
+        <h2>12. Changes to This Policy</h2>
         <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page with a revised effective date.</p>
 
-        <h2>12. Contact</h2>
+        <h2>13. Contact</h2>
         <p>If you have any questions about this Privacy Policy, contact us at:</p>
         <p>
           <strong>Email:</strong> <a href="mailto:${c.supportEmail}">${c.supportEmail}</a><br>

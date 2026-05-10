@@ -72,11 +72,24 @@ Trimora may rely on third-party services such as maps, authentication tools, pay
 
 Trimora is not intended for children under the age of 18 without lawful guardian supervision, where applicable.
 
-## 11. Changes to This Policy
+## 11. App Permissions (Android)
+
+To provide a full-featured experience, the Trimora Android application may request the following permissions:
+
+- **INTERNET**: Needed for API calls and platform communication.
+- **ACCESS_COARSE_LOCATION & ACCESS_FINE_LOCATION**: Needed to show nearby salons and enable location-based features.
+- **CAMERA**: Needed for scanning QR codes and capturing images within the app.
+- **POST_NOTIFICATIONS**: Needed to send push notifications for bookings, updates, and promotions.
+- **READ_EXTERNAL_STORAGE & WRITE_EXTERNAL_STORAGE**: Legacy storage permissions needed for handling file uploads or saving app-related data.
+- **RECORD_AUDIO & MODIFY_AUDIO_SETTINGS**: Requested for audio-related features within the platform.
+- **SYSTEM_ALERT_WINDOW**: Requested for specific overlay features required by app functions.
+- **VIBRATE**: Used for tactile feedback and notifications.
+
+## 12. Changes to This Policy
 
 We may update this Privacy Policy from time to time. The updated version will be posted on this page with a revised effective date.
 
-## 12. Contact
+## 13. Contact
 
 If you have any questions about this Privacy Policy, contact us at:
 
