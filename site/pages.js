@@ -38,6 +38,7 @@ function renderHeader() {
       <a href="/terms" data-link>Terms & Conditions</a>
       <a href="/refund-cancellation-policy" data-link>Cancellation & Refund Policy</a>
       <a href="/service-fulfillment-policy" data-link>Service Fulfillment Policy</a>
+      <a href="/account-deletion" data-link>Account Deletion</a>
     </div>
   </header>`;
 }
@@ -70,6 +71,7 @@ function renderFooter() {
             <li><a href="/terms" data-link>Terms & Conditions</a></li>
             <li><a href="/refund-cancellation-policy" data-link>Cancellation & Refund</a></li>
             <li><a href="/service-fulfillment-policy" data-link>Service Fulfillment</a></li>
+            <li><a href="/account-deletion" data-link>Account Deletion</a></li>
           </ul>
         </div>
       </div>
@@ -666,6 +668,111 @@ function renderServiceFulfillmentPage() {
 }
 
 
+// ===== ACCOUNT DELETION PAGE =====
+
+function renderAccountDeletionPage() {
+  const c = C();
+  return `
+  <main class="legal-page">
+    <div class="container">
+      <div class="legal-header">
+        <h1>Trimora Account &amp; Data Deletion Request</h1>
+        <p class="effective-date">Last updated: 11 May 2026</p>
+      </div>
+      <div class="legal-content">
+        <p>This page explains how you can request deletion of your <strong>Trimora</strong> account and associated data. If you have any questions, contact us at <a href="mailto:support@trimora.in">support@trimora.in</a>.</p>
+
+        <h2>1. How to Request Account Deletion</h2>
+        <p>To request deletion of your Trimora account, follow these steps:</p>
+        <ol>
+          <li><strong>Send an email</strong> from your registered email address to <a href="mailto:support@trimora.in">support@trimora.in</a>.</li>
+          <li>Use the subject line: <strong>Account Deletion Request</strong>.</li>
+          <li>In the email body, include:
+            <ul>
+              <li>Your registered phone number</li>
+              <li>Your account role (<strong>Customer</strong>, <strong>Barber</strong>, or <strong>Admin</strong>)</li>
+            </ul>
+          </li>
+          <li>We may ask for additional identity verification to prevent unauthorized deletion of your account.</li>
+        </ol>
+
+        <h2>2. What Data Is Deleted</h2>
+        <p>When your account deletion request is processed, the following data will be permanently deleted:</p>
+        <ul>
+          <li>Profile information (name, email, phone number, avatar)</li>
+          <li>Saved addresses and preferences</li>
+          <li>Booking history linked to your account (or anonymized if legally required)</li>
+          <li>Chat and support messages linked to your account (if applicable)</li>
+          <li>Notification tokens and device session data</li>
+        </ul>
+
+        <h2>3. What Data May Be Retained and Why</h2>
+        <p>Certain data may be retained after account deletion for legal, regulatory, and operational reasons:</p>
+        <ul>
+          <li><strong>Payment and transaction records</strong> — retained for legal, tax, fraud-prevention, and audit obligations.</li>
+          <li><strong>Security logs</strong> — retained for abuse and fraud prevention.</li>
+          <li><strong>Data required by law or a regulator</strong> — retained as mandated by applicable laws and regulations.</li>
+        </ul>
+
+        <h2>4. Retention Timelines</h2>
+        <p>The following timelines apply after a successful deletion request:</p>
+        <div class="timeline-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Action</th>
+                <th>Timeline</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Account deactivation</td>
+                <td>Within <strong>7 days</strong> of successful verification</td>
+              </tr>
+              <tr>
+                <td>Permanent deletion / anonymization of eligible data</td>
+                <td>Within <strong>30 days</strong></td>
+              </tr>
+              <tr>
+                <td>Legally required retained records</td>
+                <td>Up to <strong>90 days</strong>, or longer if required by law</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>5. Request Deletion of Specific Data Without Deleting Your Account</h2>
+        <p>If you do not want to delete your entire account but would like specific data removed, you can request partial data deletion. For example:</p>
+        <ul>
+          <li>Profile photo removal</li>
+          <li>Saved addresses deletion</li>
+          <li>Specific preference or session data removal</li>
+        </ul>
+        <p>To request partial deletion, email <a href="mailto:support@trimora.in">support@trimora.in</a> with details of the specific data you want removed. Use the subject line: <strong>Partial Data Deletion Request</strong>.</p>
+
+        <h2>6. Confirmation and Status Updates</h2>
+        <p>After you submit a deletion request, you will receive:</p>
+        <ol>
+          <li>An <strong>acknowledgment email</strong> confirming receipt of your request.</li>
+          <li>A <strong>status update</strong> after identity verification is completed.</li>
+          <li>A <strong>completion confirmation</strong> once your account and eligible data have been deleted.</li>
+        </ol>
+
+        <h2>7. Contact</h2>
+        <p>For any questions about account or data deletion, contact us at:</p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:support@trimora.in">support@trimora.in</a><br>
+          <strong>Phone:</strong> <a href="tel:${c.supportPhone}">${c.supportPhone}</a><br>
+          <strong>Address:</strong> ${c.businessAddress}
+        </p>
+
+        <p style="margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--color-border); font-size: 0.875rem; color: var(--color-text-light);">This page is publicly accessible without login. You can share this URL directly with Google Play Console or any platform requiring an account deletion link.</p>
+      </div>
+    </div>
+  </main>`;
+}
+
+
 // ===== 404 PAGE =====
 
 function render404Page() {
@@ -692,5 +799,6 @@ window.TRIMORA_PAGES = {
   renderTermsPage,
   renderRefundCancellationPage,
   renderServiceFulfillmentPage,
+  renderAccountDeletionPage,
   render404Page,
 };

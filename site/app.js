@@ -41,6 +41,11 @@
       description: "Learn how services booked through Trimora are delivered. Trimora does not ship physical goods.",
       render: () => P().renderServiceFulfillmentPage(),
     },
+    "/account-deletion": {
+      title: "Account Deletion – Trimora",
+      description: "Request deletion of your Trimora account and data. Learn what data is deleted, what is retained, and the timelines involved.",
+      render: () => P().renderAccountDeletionPage(),
+    },
   };
 
   // Navigate to a route

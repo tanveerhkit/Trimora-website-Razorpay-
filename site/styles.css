@@ -726,6 +726,48 @@ p {
   line-height: 1.7;
 }
 
+/* Timeline / Data Table */
+.timeline-table {
+  margin: var(--space-lg) 0 var(--space-md);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.timeline-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  min-width: 400px;
+}
+
+.timeline-table thead th {
+  background: var(--color-primary-glow);
+  color: var(--color-primary-dark);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: var(--space-md) var(--space-lg);
+  text-align: left;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.timeline-table tbody td {
+  padding: var(--space-md) var(--space-lg);
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border-light);
+  line-height: 1.6;
+}
+
+.timeline-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.timeline-table tbody tr:hover {
+  background: var(--color-primary-glow);
+}
+
 /* ---------- About Page ---------- */
 .about-hero {
   padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-3xl);
