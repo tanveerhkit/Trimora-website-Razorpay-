@@ -1,52 +1,34 @@
-# Trimora Website Content Pack
+# Trimora Website and Policy Pack
 
-This folder contains ready-to-use website content for Trimora, plus a developer handoff note and the Trimora logo asset.
+## Overview
 
-## Included Files
+This repository contains Trimora's static public website and the supporting business-policy copy prepared for payment onboarding and verification. Trimora is presented as a salon discovery and appointment-booking platform; the checked-in site is informational and does not itself implement booking or payment processing.
 
-- `home.md`
-- `about.md`
-- `contact.md`
-- `privacy-policy.md`
-- `terms.md`
-- `refund-cancellation-policy.md`
-- `service-fulfillment-policy.md`
-- `website-development-information.md`
-- `assets/trimora_logo.png`
+## Included content
 
-## Before Publishing
+- Static site files under `site/`
+- Home, About, and Contact copy
+- Privacy Policy and Terms
+- Refund and cancellation policy
+- Service fulfilment policy
+- Account deletion instructions
+- Website handoff notes and Trimora branding assets
+- Vercel configuration for the static site
 
-Replace these placeholders across the files:
+## Getting started
 
-- `[Legal Business Name]`
-- `[Support Email]`
-- `[Support Phone]`
-- `[Business Address]`
-- `[City, State, India]`
-- `[Effective Date]`
-- `[Website URL]`
+Open `site/index.html` in a browser to review the site locally. The layout and content are defined by:
 
-## Suggested Website Pages
+```text
+site/index.html
+site/styles.css
+site/config.js
+site/pages.js
+site/app.js
+```
 
-- `/`
-- `/about`
-- `/contact`
-- `/privacy-policy`
-- `/terms`
-- `/refund-cancellation-policy`
-- `/service-fulfillment-policy`
+Review `site/config.js` before publishing and replace all business placeholders in the Markdown content, including legal name, support details, address, effective dates, and public URL.
 
-## Branding
+## Publishing checklist
 
-Primary logo file:
-
-- `assets/trimora_logo.png`
-
-## Purpose
-
-This content pack is intended for:
-
-- a landing website for Razorpay onboarding
-- early public business presence
-- app store and payment gateway verification support
-- handing content to a web developer or no-code builder
+Confirm that every policy matches actual Trimora operations, contact details are monitored, account-deletion instructions work, and payment claims reflect the live product. This repository contains website content only; any Razorpay integration should be documented in the application that implements it.
