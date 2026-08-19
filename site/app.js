@@ -7,8 +7,8 @@
   // Route definitions with SEO metadata
   const routes = {
     "/": {
-      title: "Trimora | Salon Discovery and Appointment Booking",
-      description: "Trimora is a salon discovery and appointment booking platform. Find salons, browse services, and book appointments online.",
+      title: "Trimora | Discover. Book. Groom.",
+      description: "Discover local salons and barbers, explore grooming services, and book appointments that fit your day with Trimora.",
       render: () => P().renderHomePage(),
     },
     "/about": {
@@ -75,6 +75,7 @@
     // Re-init interactive elements
     initHeader();
     updateActiveNav(path);
+    if (P().initMarketingInteractions) P().initMarketingInteractions();
   }
 
   // Handle link clicks
