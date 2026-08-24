@@ -48,8 +48,28 @@
     },
   };
 
+  // GitHub Pages serves this site from a repository subpath; local/Vercel previews use root.
+  const PROJECT_BASE = "/Trimora-website-Razorpay-";
+  const isGitHubPages = window.location.hostname.endsWith("github.io");
+  const basePath = isGitHubPages ? PROJECT_BASE : "";
+
+  function appPath(pathname) {
+    let path = pathname || "/";
+    if (basePath && path.startsWith(basePath)) path = path.slice(basePath.length) || "/";
+    return path.startsWith("/") ? path : `/${path}`;
+  }
+
+  function rewriteInternalLinks() {
+    if (!basePath) return;
+    document.querySelectorAll('a[href^="/"]').forEach((link) => {
+      const href = link.getAttribute("href");
+      if (href && !href.startsWith(basePath)) link.setAttribute("href", `${basePath}${href}`);
+    });
+  }
+
   // Navigate to a route
-  function navigateTo(path) {
+  function navigateTo(rawPath) {
+    const path = appPath(rawPath);
     const route = routes[path];
     const appContent = document.getElementById("app-content");
 
@@ -68,6 +88,7 @@
     const footer = P().renderFooter();
 
     appContent.innerHTML = header + content + footer;
+    rewriteInternalLinks();
 
     // Scroll to top
     window.scrollTo(0, 0);
@@ -85,10 +106,13 @@
 
     e.preventDefault();
     const href = link.getAttribute("href");
-    if (href === window.location.pathname) return;
+    const target = new URL(href, window.location.origin);
+    const routePath = appPath(target.pathname);
+    if (routePath === appPath(window.location.pathname) && !target.hash) return;
 
     history.pushState(null, "", href);
-    navigateTo(href);
+    navigateTo(routePath);
+    if (target.hash) requestAnimationFrame(() => document.querySelector(target.hash)?.scrollIntoView({ behavior: "smooth" }));
   }
 
   // Handle browser back/forward
