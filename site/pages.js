@@ -273,7 +273,8 @@ function renderAboutPage() {
           <p style="margin-bottom: var(--space-xs);"><strong>Email:</strong> <a href="mailto:${c.supportEmail}">${c.supportEmail}</a></p>
           <p style="margin-bottom: var(--space-xs);"><strong>Phone:</strong> <a href="tel:${c.supportPhone}">${c.supportPhone}</a></p>
           <p style="margin-bottom: var(--space-xs);"><strong>Address:</strong> ${c.businessAddress}</p>
-          <p style="margin-bottom: 0; margin-top: var(--space-md); font-size: 0.875rem;">Trimora is operated by ${c.legalBusinessName}, ${c.cityState}.</p>
+          <p style="margin-bottom: var(--space-xs);"><strong>App:</strong> <a href="https://play.google.com/store/apps/details?id=com.app.trimora&hl=en_IN" target="_blank" rel="noopener noreferrer">Download on Google Play</a></p>
+          <p style="margin-bottom: 0; margin-top: var(--space-md); font-size: 0.875rem;">Trimora is operated by ${c.legalBusinessName}, ${c.cityState}. <a href="https://www.linkedin.com/company/trimora-technologies" target="_blank" rel="noopener noreferrer">Visit Trimora Technologies on LinkedIn</a>.</p>
         </div>
       </div>
     </section>
@@ -865,7 +866,7 @@ window.TRIMORA_PAGES = {
               <span class="section-eyebrow section-eyebrow-light">Make grooming fit your day</span>
               <h2>Ready when you are.</h2>
             </div>
-            <div class="footer-cta-actions"><a class="btn btn-primary" href="mailto:${c.supportEmail}?subject=I%20want%20to%20use%20Trimora">Start with Trimora ${icon("arrow", 18)}</a><a class="btn btn-play btn-small" href="https://play.google.com/store/search?q=trimora&c=apps&hl=en_IN" target="_blank" rel="noopener noreferrer"><span class="play-badge-icon">${icon("play", 20)}</span> Google Play</a></div>
+            <div class="footer-cta-actions"><a class="btn btn-primary" href="mailto:${c.supportEmail}?subject=I%20want%20to%20use%20Trimora">Start with Trimora ${icon("arrow", 18)}</a><a class="btn btn-play btn-small" href="https://play.google.com/store/apps/details?id=com.app.trimora&hl=en_IN" target="_blank" rel="noopener noreferrer"><span class="play-badge-icon">${icon("play", 20)}</span> Google Play</a></div>
           </div>
           <div class="footer-grid">
             <div class="footer-brand">
@@ -879,7 +880,7 @@ window.TRIMORA_PAGES = {
             <div class="footer-col"><h4>Support</h4><ul><li><a href="/contact" data-link>Contact support</a></li><li><a href="/refund-cancellation-policy" data-link>Cancellation & refund</a></li><li><a href="/account-deletion" data-link>Account deletion</a></li></ul></div>
             <div class="footer-col"><h4>Legal</h4><ul><li><a href="/privacy-policy" data-link>Privacy policy</a></li><li><a href="/terms" data-link>Terms & conditions</a></li><li><a href="/service-fulfillment-policy" data-link>Service fulfillment</a></li></ul></div>
           </div>
-          <div class="footer-bottom"><p>&copy; ${c.copyrightYear} ${c.legalBusinessName}. All rights reserved.</p><div class="footer-contact-info"><a href="mailto:${c.supportEmail}">${c.supportEmail}</a><a href="tel:${c.supportPhone}">${c.supportPhone}</a></div></div>
+          <div class="footer-bottom"><p>&copy; ${c.copyrightYear} ${c.legalBusinessName}. All rights reserved.</p><div class="footer-contact-info"><a href="mailto:${c.supportEmail}">${c.supportEmail}</a><a href="tel:${c.supportPhone}">${c.supportPhone}</a><a href="https://www.linkedin.com/company/trimora-technologies" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div>
         </div>
       </footer>`;
   }
@@ -916,7 +917,7 @@ window.TRIMORA_PAGES = {
               <div class="eyebrow-pill"><span></span> The smarter way to book grooming</div>
               <h1>Your grooming.<br><em>Your time.</em><br>Your choice.</h1>
               <p class="hero-lead">Discover local salons and barbers, explore services, and book an appointment that fits your day.</p>
-              <div class="hero-actions"><a href="#for-customers" class="btn btn-primary btn-large">Find your next appointment ${icon("arrow", 18)}</a><a href="https://play.google.com/store/search?q=trimora&c=apps&hl=en_IN" class="btn btn-play btn-large" target="_blank" rel="noopener noreferrer"><span class="play-badge-icon">${icon("play", 20)}</span> Download on Google Play</a><a href="#for-owners" class="text-link text-link-light">I run a salon ${icon("arrow", 16)}</a></div>
+              <div class="hero-actions"><a href="#for-customers" class="btn btn-primary btn-large">Find your next appointment ${icon("arrow", 18)}</a><a href="https://play.google.com/store/apps/details?id=com.app.trimora&hl=en_IN" class="btn btn-play btn-large" target="_blank" rel="noopener noreferrer"><span class="play-badge-icon">${icon("play", 20)}</span> Download on Google Play</a><a href="#for-owners" class="text-link text-link-light">I run a salon ${icon("arrow", 16)}</a></div>
               <div class="hero-meta"><span>${icon("check", 16)} Simple to explore</span><span>${icon("check", 16)} Built for local</span><span>${icon("check", 16)} Support when you need it</span></div>
             </div>
             <div class="hero-visual">${phoneMockup()}</div>
