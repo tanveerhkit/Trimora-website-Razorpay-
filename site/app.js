@@ -102,6 +102,35 @@
     const menuToggle = document.getElementById("menu-toggle");
     const navMobile = document.getElementById("nav-mobile");
     const menuIcon = document.getElementById("menu-icon");
+    const themeToggles = document.querySelectorAll("[data-theme-toggle]");
+
+    // Theme preference: saved choice first, then the user's system preference.
+    const savedTheme = localStorage.getItem("trimora-theme");
+    const systemTheme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    const currentTheme = savedTheme === "dark" || savedTheme === "light" ? savedTheme : systemTheme;
+    document.documentElement.dataset.theme = currentTheme;
+
+    function updateThemeControls(theme) {
+      themeToggles.forEach((toggle) => {
+        const isDark = theme === "dark";
+        toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+        toggle.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
+        const icon = toggle.querySelector(".theme-toggle-icon");
+        const label = toggle.querySelector(".theme-toggle-label");
+        if (icon) icon.textContent = isDark ? "☀" : "☾";
+        if (label) label.textContent = isDark ? (toggle.classList.contains("theme-toggle-mobile") ? "Light mode" : "Light") : (toggle.classList.contains("theme-toggle-mobile") ? "Dark mode" : "Dark");
+      });
+    }
+
+    updateThemeControls(currentTheme);
+    themeToggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = nextTheme;
+        localStorage.setItem("trimora-theme", nextTheme);
+        updateThemeControls(nextTheme);
+      });
+    });
 
     // Scroll shadow
     function onScroll() {
