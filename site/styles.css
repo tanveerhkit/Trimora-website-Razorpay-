@@ -1514,3 +1514,32 @@ body::before { opacity: .5; background: radial-gradient(circle at 10% 20%, rgba(
 @keyframes logo-ring { 0% { opacity: 0; transform: translate(-50%, -50%) scale(.35) rotate(-24deg); } 60% { opacity: 1; transform: translate(-50%, -50%) scale(1.1) rotate(12deg); } 100% { opacity: .72; transform: translate(-50%, -50%) scale(1) rotate(0); } }
 @media (prefers-reduced-motion: reduce) { .logo-link:hover .logo-img, .logo-link:focus-visible .logo-img { transform: none; } .logo-link:hover::before, .logo-link:hover::after, .logo-link:focus-visible::before, .logo-link:focus-visible::after { animation: none; } }
 @media (max-width: 720px) { .logo-link::before { width: 96px; height: 96px; } .logo-link::after { width: 122px; height: 122px; } .logo-link:hover .logo-img, .logo-link:focus-visible .logo-img { transform: scale(1.12) rotate(-3deg); } .footer-app-tagline { font-size: .66rem; } }
+
+
+/* Clean logo pop-out revision: one strong gesture, no visual clutter */
+.logo-link { z-index: 20; }
+.logo-link::before { top: 50%; left: 50%; width: 154px; height: 154px; border: 0; border-radius: 50%; background: rgba(255,230,109,.92); box-shadow: 0 0 0 12px rgba(255,111,145,.3), 0 0 0 28px rgba(108,99,255,.18), 0 22px 42px rgba(23,19,41,.3); filter: none; opacity: 0; transform: translate(-50%, -50%) scale(.16); transition: opacity 240ms ease, transform 520ms cubic-bezier(.16, 1, .3, 1); }
+.logo-link::after { content: "DOWNLOAD IT FROM PLAY STORE"; top: calc(100% + 1.25rem); left: 50%; width: max-content; height: auto; padding: .72rem 1rem; border: 3px solid var(--max-ink); border-radius: 999px; background: var(--max-pink); color: #fff; font-size: .72rem; line-height: 1; font-weight: 950; letter-spacing: .08em; box-shadow: 5px 5px 0 var(--max-blue); opacity: 0; transform: translate(-50%, -10px) scale(.78); transition: opacity 220ms ease 90ms, transform 420ms cubic-bezier(.16, 1, .3, 1) 90ms; }
+.logo-link:hover::before, .logo-link:focus-visible::before { opacity: 1; transform: translate(-50%, -50%) scale(1); animation: logo-clean-glow 1.8s ease-in-out infinite alternate; }
+.logo-link:hover::after, .logo-link:focus-visible::after { opacity: 1; transform: translate(-50%, 0) scale(1); }
+.logo-link:hover .logo-img, .logo-link:focus-visible .logo-img { position: relative; z-index: 2; transform: scale(2.35) rotate(-2deg); filter: brightness(0) invert(1) drop-shadow(7px 9px 0 var(--max-blue)) drop-shadow(-5px -5px 0 var(--max-pink)); }
+.site-footer-modern .logo-link:hover .logo-img, .site-footer-modern .logo-link:focus-visible .logo-img { transform: scale(2.15) rotate(-2deg); }
+@keyframes logo-clean-glow { from { box-shadow: 0 0 0 12px rgba(255,111,145,.28), 0 0 0 28px rgba(108,99,255,.16), 0 22px 42px rgba(23,19,41,.28); } to { box-shadow: 0 0 0 18px rgba(255,111,145,.18), 0 0 0 38px rgba(108,99,255,.1), 0 28px 56px rgba(23,19,41,.36); } }
+@media (prefers-reduced-motion: reduce) { .logo-link:hover::before, .logo-link:focus-visible::before { animation: none; } }
+@media (max-width: 720px) { .logo-link::before { width: 122px; height: 122px; } .logo-link::after { top: calc(100% + .85rem); font-size: .58rem; padding: .58rem .72rem; } .logo-link:hover .logo-img, .logo-link:focus-visible .logo-img, .site-footer-modern .logo-link:hover .logo-img, .site-footer-modern .logo-link:focus-visible .logo-img { transform: scale(1.65) rotate(-2deg); } }
+
+
+/* Final logo interaction polish: oversized, clean, and readable */
+.site-header-modern, .site-header-modern .header-inner, .site-footer-modern, .site-footer-modern .footer-grid { overflow: visible; }
+.logo-link::before { width: 168px; height: 168px; background: var(--max-yellow); border: 5px solid var(--max-ink); box-shadow: 10px 10px 0 var(--max-pink); }
+.logo-link::after { top: calc(100% + 1.45rem); padding: .95rem 1.25rem; border: 4px solid var(--max-ink); background: var(--max-ink); color: var(--max-yellow); font-size: .8rem; letter-spacing: .1em; box-shadow: 6px 6px 0 var(--max-pink); }
+.logo-link:hover .logo-img, .logo-link:focus-visible .logo-img { transform: translateY(16px) scale(2.5) rotate(0deg); filter: brightness(0) invert(1) drop-shadow(9px 10px 0 var(--max-ink)); }
+.site-footer-modern .logo-link:hover .logo-img, .site-footer-modern .logo-link:focus-visible .logo-img { transform: translateY(-10px) scale(2.35) rotate(0deg); }
+@media (prefers-reduced-motion: reduce) { .logo-link:hover .logo-img, .logo-link:focus-visible .logo-img { transform: none; } }
+@media (max-width: 720px) { .logo-link::before { width: 132px; height: 132px; } .logo-link::after { top: calc(100% + 1rem); padding: .72rem .85rem; font-size: .62rem; } .logo-link:hover .logo-img, .logo-link:focus-visible .logo-img, .site-footer-modern .logo-link:hover .logo-img, .site-footer-modern .logo-link:focus-visible .logo-img { transform: translateY(8px) scale(1.8) rotate(0deg); } }
+
+
+/* Keep the header Play Store callout fully inside the viewport */
+.site-header-modern .logo-link::after { left: 0; transform: translate(0, -10px) scale(.78); }
+.site-header-modern .logo-link:hover::after, .site-header-modern .logo-link:focus-visible::after { transform: translate(0, 0) scale(1); }
+@media (max-width: 720px) { .site-header-modern .logo-link::after { left: -2px; } }
