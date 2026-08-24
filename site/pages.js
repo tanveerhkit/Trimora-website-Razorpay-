@@ -840,7 +840,7 @@ window.TRIMORA_PAGES = {
             <a href="/about" data-link>About</a>
           </nav>
           <div class="header-actions">
-            <a href="mailto:${window.TRIMORA_CONFIG.supportEmail}?subject=Join%20Trimora" class="header-link">Join Trimora</a>
+            <a href="https://www.linkedin.com/company/trimora-technologies" class="header-link" target="_blank" rel="noopener noreferrer">Join Trimora</a>
             <a href="/contact" class="btn btn-small btn-light" data-link>Get support ${icon("arrow", 16)}</a>
           </div>
           <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">${icon("menu")}</button>
@@ -851,7 +851,7 @@ window.TRIMORA_PAGES = {
           <a href="/#how-it-works">How it works</a>
           <a href="/about" data-link>About Trimora</a>
           <a href="/contact" data-link>Contact support</a>
-          <a href="mailto:${window.TRIMORA_CONFIG.supportEmail}?subject=Join%20Trimora">Join Trimora ${icon("arrow", 16)}</a>
+          <a href="https://www.linkedin.com/company/trimora-technologies" target="_blank" rel="noopener noreferrer">Join Trimora ${icon("arrow", 16)}</a>
         </div>
       </header>`;
   }
