@@ -55,8 +55,13 @@
 
   function appPath(pathname) {
     let path = pathname || "/";
-    if (basePath && (path === basePath || path === `${basePath}/`)) return "/";
-    if (basePath && path.startsWith(`${basePath}/`)) path = path.slice(basePath.length) || "/";
+    const projectIndex = path.indexOf(PROJECT_BASE);
+    if (projectIndex >= 0) {
+      path = path.slice(projectIndex + PROJECT_BASE.length) || "/";
+      if (!path.startsWith("/")) path = `/${path}`;
+    } else if (basePath && (path === basePath || path === `${basePath}/`)) {
+      return "/";
+    }
     if (path === "/404.html" || path.endsWith("/404.html")) return "/";
     return path.startsWith("/") ? path : `/${path}`;
   }
