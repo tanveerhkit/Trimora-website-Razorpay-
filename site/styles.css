@@ -1311,3 +1311,28 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -5; pointer-even
   .hero-device { animation-duration: 7s; }
   .owner-dashboard { transform: none; }
 }
+
+
+/* Contrast and brand visibility correction */
+.owner-section { background: linear-gradient(135deg, #f4e2dc 0%, #fffaf5 54%, #edf3d8 100%); color: var(--ink); }
+.owner-copy h2 { color: var(--plum-deep); text-shadow: none; }
+.owner-copy h2 span { color: var(--plum); }
+.owner-copy > p { color: #3f4b46; }
+.owner-points strong { color: var(--plum-deep); }
+.owner-points small { color: #53635b; }
+.owner-points svg { color: var(--copper); }
+.owner-dashboard { background: linear-gradient(145deg, #173d35 0%, #254f43 58%, #6b3858 100%); border-color: rgba(75,38,63,.24); }
+.owner-dashboard .dashboard-top strong, .owner-dashboard .dashboard-stats strong, .owner-dashboard .dashboard-list strong { color: #fff; }
+.owner-dashboard .dashboard-kicker { color: #dceca8; }
+.owner-dashboard .dashboard-stats small { color: rgba(255,255,255,.72); }
+.owner-dashboard .dashboard-list small { color: rgba(255,255,255,.68); }
+.owner-dashboard .dashboard-footer { color: rgba(255,255,255,.72); }
+.owner-dashboard .dashboard-footer span:first-child { color: #dceca8; }
+.site-header-dark .logo-img { height: 70px; width: auto; object-fit: contain; }
+.site-footer-modern .logo-img { height: 76px; width: auto; object-fit: contain; }
+.logo-link { min-height: 70px; }
+@media (max-width: 720px) {
+  .site-header-dark .logo-img { height: 60px; }
+  .site-footer-modern .logo-img { height: 68px; }
+  .logo-link { min-height: 60px; }
+}
