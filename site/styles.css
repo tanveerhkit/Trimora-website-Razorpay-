@@ -1217,3 +1217,97 @@ body::selection { background: var(--lime); color: var(--ink); }
   .site-header-dark .logo-img { height: 50px; }
   .hero-device { transform: rotate(5deg) scale(.98); }
 }
+
+
+/* =========================================================
+   Trimora Salon Refresh — blush, plum, sage & copper
+   ========================================================= */
+:root {
+  --forest: #173d35;
+  --forest-deep: #0d2924;
+  --ink: #1c2422;
+  --ink-soft: #52615b;
+  --paper: #fffaf5;
+  --paper-warm: #f7eee7;
+  --mint: #b8d9c4;
+  --lime: #dceca8;
+  --gold: #e4a56b;
+  --blush: #f4d9d0;
+  --plum: #6b3858;
+  --plum-deep: #4b263f;
+  --copper: #c87357;
+  --line: rgba(28, 36, 34, 0.12);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+body { background: var(--paper); }
+body::before { content: ""; position: fixed; inset: 0; z-index: -5; pointer-events: none; opacity: .24; background: radial-gradient(circle at 8% 14%, rgba(244,217,208,.5), transparent 22%), radial-gradient(circle at 93% 58%, rgba(220,236,168,.35), transparent 26%); }
+.site-header-dark { background: rgba(13,41,36,.82); border-bottom-color: rgba(255,255,255,.12); }
+.site-header-dark.scrolled { background: rgba(13,41,36,.96); box-shadow: 0 18px 48px rgba(13,41,36,.2); }
+.site-header-dark .nav-desktop a:hover, .site-header-dark .nav-desktop a.active, .site-header-dark .header-link:hover { color: var(--blush); }
+.hero-modern { background: var(--forest-deep); }
+.hero-grid-glow { background: radial-gradient(circle at 78% 30%, rgba(244,217,208,.18), transparent 25%), radial-gradient(circle at 18% 10%, rgba(228,165,107,.18), transparent 23%), linear-gradient(115deg, #0d2924 8%, #214c40 55%, #102f29 100%); }
+.hero-grid-glow::before { content: ""; position: absolute; width: 18rem; height: 18rem; right: 12%; top: 20%; border: 1px solid rgba(244,217,208,.18); border-radius: 42% 58% 57% 43%; animation: salon-orbit 14s linear infinite; }
+.hero-modern h1 em { color: var(--blush); }
+.eyebrow-pill { border-color: rgba(244,217,208,.35); color: var(--blush); }
+.eyebrow-pill span { background: var(--copper); box-shadow: 0 0 0 5px rgba(200,115,87,.15); }
+.hero-actions .btn-primary, .owner-section .btn-primary { background: var(--blush); color: var(--plum-deep); }
+.hero-actions .btn-primary:hover, .owner-section .btn-primary:hover { background: #fff0ea; color: var(--plum-deep); box-shadow: 0 18px 38px rgba(244,217,208,.24); }
+.hero-device { box-shadow: 22px 28px 90px rgba(0,0,0,.42), inset 0 0 0 1px rgba(255,255,255,.1); animation: device-float 6s ease-in-out infinite; }
+.hero-orbit { border-color: rgba(244,217,208,.22); animation: orbit-breathe 5s ease-in-out infinite; }
+.orbit-two { border-color: rgba(228,165,107,.25); animation-delay: -2s; }
+.floating-card { border-color: rgba(244,217,208,.25); box-shadow: 0 18px 46px rgba(0,0,0,.28); animation: card-float 5s ease-in-out infinite; }
+.floating-card-bottom { animation-delay: -2.3s; }
+.floating-icon { background: var(--blush); color: var(--plum-deep); }
+.floating-icon.gold { background: var(--gold); color: var(--plum-deep); }
+.signal-strip { background: linear-gradient(90deg, #eaf4d1, #f8e4dd 50%, #eaf4d1); }
+.signal-grid > div { transition: transform 220ms var(--ease-out), background 220ms var(--ease-out); }
+.signal-grid > div:hover { transform: translateY(-4px); background: rgba(255,255,255,.42); }
+.section-eyebrow { color: var(--plum); }
+.section-eyebrow-gold { color: var(--copper); }
+.section-intro h2 span, .owner-copy h2 span { color: var(--plum); }
+.story-panel-dark { background: linear-gradient(145deg, var(--plum-deep), #7a4562 62%, var(--copper)); }
+.story-panel-light { background: linear-gradient(145deg, #fff7f1, var(--blush)); }
+.feature-modern, .how-card, .interest-form { border-color: rgba(107,56,88,.14); }
+.feature-modern:hover, .how-card:hover { border-color: rgba(200,115,87,.45); box-shadow: 0 24px 54px rgba(107,56,88,.12); }
+.feature-icon-modern, .list-icon { background: #f8e1d9; color: var(--plum); }
+.map-pin { background: var(--copper); box-shadow: 0 0 0 6px rgba(200,115,87,.14); animation: pin-pulse 2.8s ease-in-out infinite; }
+.map-pin.pin-two { animation-delay: -.8s; }
+.map-pin.pin-three { animation-delay: -1.6s; }
+.service-chips span { background: #f8e1d9; color: var(--plum-deep); transition: transform 180ms var(--ease-out), background 180ms var(--ease-out); }
+.service-chips span:hover { transform: translateY(-3px) rotate(-2deg); background: var(--blush); }
+.owner-section { background: linear-gradient(135deg, #f5e8e2, #fffaf5 58%, #edf4d6); }
+.owner-dashboard { box-shadow: 0 26px 70px rgba(75,38,63,.18); border-color: rgba(107,56,88,.16); transform: rotate(1.2deg); transition: transform 300ms var(--ease-out), box-shadow 300ms var(--ease-out); }
+.owner-dashboard:hover { transform: rotate(0) translateY(-6px); box-shadow: 0 32px 84px rgba(75,38,63,.24); }
+.interest-section { background: linear-gradient(135deg, var(--forest-deep), var(--plum-deep)); color: #fff; }
+.interest-section .section-eyebrow, .interest-section h2 span { color: var(--blush); }
+.interest-form { box-shadow: 0 24px 70px rgba(0,0,0,.22); }
+.form-status { color: var(--copper); }
+.faq-section { background: #fffdf9; }
+.faq-list details[open] { background: #fff1eb; border-color: rgba(200,115,87,.32); }
+.faq-list summary span { color: var(--copper); }
+.support-strip { background: linear-gradient(90deg, #dceca8, #f4d9d0); }
+.site-footer-modern { background: linear-gradient(135deg, #0d2924, #4b263f); }
+.site-footer-modern .footer-cta { border-bottom-color: rgba(244,217,208,.2); }
+.site-footer-modern .btn-primary { background: var(--blush); color: var(--plum-deep); }
+
+.reveal-on-scroll { opacity: 0; transform: translateY(24px); transition: opacity 650ms var(--ease-out), transform 650ms var(--ease-out); }
+.reveal-on-scroll.is-visible { opacity: 1; transform: none; }
+[data-tilt] { transform-style: preserve-3d; transition: transform 260ms var(--ease-out); }
+
+@keyframes device-float { 0%, 100% { transform: rotate(5deg) translateY(0); } 50% { transform: rotate(3deg) translateY(-11px); } }
+@keyframes card-float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-8px) rotate(0); } }
+@keyframes orbit-breathe { 0%, 100% { opacity: .55; transform: rotate(-15deg) scale(1); } 50% { opacity: .95; transform: rotate(-10deg) scale(1.04); } }
+@keyframes salon-orbit { to { transform: rotate(360deg); } }
+@keyframes pin-pulse { 0%, 100% { box-shadow: 0 0 0 6px rgba(200,115,87,.14); } 50% { box-shadow: 0 0 0 12px rgba(200,115,87,0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .001ms !important; }
+  .reveal-on-scroll { opacity: 1; transform: none; }
+}
+
+@media (max-width: 768px) {
+  .hero-grid-glow::before { right: -5%; top: 25%; width: 12rem; height: 12rem; }
+  .hero-device { animation-duration: 7s; }
+  .owner-dashboard { transform: none; }
+}

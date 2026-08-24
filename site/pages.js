@@ -960,6 +960,39 @@ window.TRIMORA_PAGES = {
         window.location.href = `mailto:${window.TRIMORA_CONFIG.supportEmail}?subject=${subject}&body=${body}`;
       });
     });
+
+    const revealItems = document.querySelectorAll(".signal-grid > div, .section-modern, .how-card, .feature-modern, .story-panel, .interest-form, .faq-list details");
+    revealItems.forEach((item, index) => {
+      item.classList.add("reveal-on-scroll");
+      item.style.transitionDelay = `${Math.min(index * 45, 260)}ms`;
+    });
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -48px" });
+      revealItems.forEach((item) => revealObserver.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+    }
+
+    const canTilt = window.matchMedia && window.matchMedia("(pointer: fine)").matches;
+    if (canTilt) {
+      document.querySelectorAll(".feature-modern, .how-card, .story-panel").forEach((card) => {
+        card.addEventListener("pointermove", (event) => {
+          const rect = card.getBoundingClientRect();
+          const rotateX = ((event.clientY - rect.top) / rect.height - 0.5) * -3;
+          const rotateY = ((event.clientX - rect.left) / rect.width - 0.5) * 4;
+          card.style.transform = `translateY(-4px) perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+        card.addEventListener("pointerleave", () => { card.style.transform = ""; });
+      });
+    }
   }
 
   const original = window.TRIMORA_PAGES || {};
