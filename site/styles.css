@@ -1355,3 +1355,16 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -5; pointer-even
   .interest-section .interest-layout > div > p, .interest-section .interest-note { color: #fff; }
   .interest-section .form-footnote { color: #263c34; }
 }
+
+
+/* Larger Trimora brand mark */
+:root { --header-height: 86px; }
+.site-header-dark .logo-img { height: 88px; }
+.site-footer-modern .logo-img { height: 92px; }
+.logo-link { min-height: 86px; }
+@media (max-width: 720px) {
+  :root { --header-height: 72px; }
+  .site-header-dark .logo-img { height: 72px; }
+  .site-footer-modern .logo-img { height: 80px; }
+  .logo-link { min-height: 72px; }
+}
