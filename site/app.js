@@ -55,7 +55,9 @@
 
   function appPath(pathname) {
     let path = pathname || "/";
-    if (basePath && path.startsWith(basePath)) path = path.slice(basePath.length) || "/";
+    if (basePath && (path === basePath || path === `${basePath}/`)) return "/";
+    if (basePath && path.startsWith(`${basePath}/`)) path = path.slice(basePath.length) || "/";
+    if (path === "/404.html" || path.endsWith("/404.html")) return "/";
     return path.startsWith("/") ? path : `/${path}`;
   }
 
