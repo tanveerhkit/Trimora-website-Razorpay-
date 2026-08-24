@@ -1494,3 +1494,23 @@ body::before { opacity: .5; background: radial-gradient(circle at 10% 20%, rgba(
   .feature-modern:nth-child(2), .feature-modern:nth-child(3) { transform: none; }
   .owner-section { border-top-width: 5px; border-bottom-width: 5px; }
 }
+
+
+/* Maximalist logo pop + Play Store tagline */
+.logo-link { position: relative; isolation: isolate; }
+.logo-link::before, .logo-link::after { content: ""; position: absolute; z-index: -1; pointer-events: none; border-radius: 50%; opacity: 0; transform: translate(-50%, -50%) scale(.35); transition: opacity 220ms var(--ease-out), transform 420ms var(--ease-out); }
+.logo-link::before { top: 50%; left: 50%; width: 118px; height: 118px; background: radial-gradient(circle, rgba(255,230,109,.92) 0 13%, rgba(255,111,145,.52) 14% 33%, rgba(108,99,255,.36) 34% 54%, transparent 68%); filter: blur(1px); }
+.logo-link::after { top: 50%; left: 50%; width: 150px; height: 150px; border: 4px dashed var(--max-yellow); }
+.logo-link:hover::before, .logo-link:focus-visible::before { opacity: 1; transform: translate(-50%, -50%) scale(1.12); animation: logo-boom 720ms var(--ease-out) both; }
+.logo-link:hover::after, .logo-link:focus-visible::after { opacity: .85; transform: translate(-50%, -50%) scale(1); animation: logo-ring 900ms var(--ease-out) both; }
+.logo-link:hover .logo-img, .logo-link:focus-visible .logo-img { position: relative; z-index: 1; transform: scale(1.24) rotate(-5deg); filter: drop-shadow(6px 7px 0 var(--max-pink)) drop-shadow(-4px -4px 0 var(--max-yellow)) brightness(0) invert(1); }
+.logo-img { transition: transform 360ms var(--ease-out), filter 360ms var(--ease-out); transform-origin: center; }
+.site-footer-modern .logo-link:hover .logo-img, .site-footer-modern .logo-link:focus-visible .logo-img { filter: drop-shadow(6px 7px 0 var(--max-pink)) drop-shadow(-4px -4px 0 var(--max-yellow)) brightness(0) invert(1); }
+.footer-app-tagline { display: inline-flex; align-items: center; gap: .5rem; width: fit-content; margin-top: 1.15rem; padding: .6rem .8rem; border: 2px solid var(--max-yellow); border-radius: 999px; background: var(--max-pink); color: #fff; font-size: .72rem; font-weight: 900; letter-spacing: .02em; box-shadow: 4px 4px 0 var(--max-blue); transition: transform 220ms var(--ease-out), background 220ms var(--ease-out), box-shadow 220ms var(--ease-out); }
+.footer-app-tagline:hover { background: var(--max-yellow); color: var(--max-ink); transform: translateY(-4px) rotate(-1deg); box-shadow: 6px 6px 0 var(--max-blue); }
+.footer-app-tagline .play-badge-icon { width: 1.2rem; height: 1.2rem; background: var(--max-cream); color: var(--max-ink); }
+.footer-app-tagline .google-play-icon { width: 14px; height: 14px; }
+@keyframes logo-boom { 0% { opacity: 0; transform: translate(-50%, -50%) scale(.35); } 55% { opacity: 1; transform: translate(-50%, -50%) scale(1.22); } 100% { opacity: .82; transform: translate(-50%, -50%) scale(1.08); } }
+@keyframes logo-ring { 0% { opacity: 0; transform: translate(-50%, -50%) scale(.35) rotate(-24deg); } 60% { opacity: 1; transform: translate(-50%, -50%) scale(1.1) rotate(12deg); } 100% { opacity: .72; transform: translate(-50%, -50%) scale(1) rotate(0); } }
+@media (prefers-reduced-motion: reduce) { .logo-link:hover .logo-img, .logo-link:focus-visible .logo-img { transform: none; } .logo-link:hover::before, .logo-link:hover::after, .logo-link:focus-visible::before, .logo-link:focus-visible::after { animation: none; } }
+@media (max-width: 720px) { .logo-link::before { width: 96px; height: 96px; } .logo-link::after { width: 122px; height: 122px; } .logo-link:hover .logo-img, .logo-link:focus-visible .logo-img { transform: scale(1.12) rotate(-3deg); } .footer-app-tagline { font-size: .66rem; } }

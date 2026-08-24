@@ -874,7 +874,7 @@ window.TRIMORA_PAGES = {
                 <img src="assets/trimora_logo.png" alt="Trimora" class="logo-img logo-img-light">
               </a>
               <p>Discover local grooming businesses, choose your service, and book with more clarity.</p>
-              <span class="footer-note">Built for India's salons, barbers, and customers.</span>
+              <span class="footer-note">Built for India's salons, barbers, and customers.</span><a class="footer-app-tagline" href="https://play.google.com/store/apps/details?id=com.app.trimora&hl=en_IN" target="_blank" rel="noopener noreferrer"><span class="play-badge-icon">${icon("play", 16)}</span> Download the app from Play Store ${icon("arrow", 14)}</a>
             </div>
             <div class="footer-col"><h4>Explore</h4><ul><li><a href="/#for-customers">For customers</a></li><li><a href="/#for-owners">For owners</a></li><li><a href="/#how-it-works">How it works</a></li><li><a href="/about" data-link>About Trimora</a></li></ul></div>
             <div class="footer-col"><h4>Support</h4><ul><li><a href="/contact" data-link>Contact support</a></li><li><a href="/refund-cancellation-policy" data-link>Cancellation & refund</a></li><li><a href="/account-deletion" data-link>Account deletion</a></li></ul></div>
