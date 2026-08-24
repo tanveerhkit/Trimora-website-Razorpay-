@@ -1336,3 +1336,22 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -5; pointer-even
   .site-footer-modern .logo-img { height: 68px; }
   .logo-link { min-height: 60px; }
 }
+
+
+/* Business-interest contrast correction */
+.interest-section { color: #fffaf5; }
+.interest-section .interest-layout h2 { color: #fffaf5; text-shadow: 0 2px 14px rgba(0,0,0,.16); }
+.interest-section .interest-layout h2 span { color: #f7c6b5; }
+.interest-section .interest-layout > div > p { color: rgba(255,250,245,.9); }
+.interest-section .interest-note { color: rgba(255,250,245,.88); }
+.interest-section .interest-note svg { color: #f5c36f; }
+.interest-section .interest-form { background: #fffaf5; border-color: rgba(255,255,255,.58); }
+.interest-section .interest-form label { color: #173d35; }
+.interest-section .interest-form input, .interest-section .interest-form select { color: #1c2422; border-color: rgba(23,61,53,.28); }
+.interest-section .interest-form input::placeholder { color: #64716b; opacity: 1; }
+.interest-section .form-footnote { color: #52615b; }
+.interest-section .form-status { color: #8d4d2f; }
+@media (prefers-contrast: more) {
+  .interest-section .interest-layout > div > p, .interest-section .interest-note { color: #fff; }
+  .interest-section .form-footnote { color: #263c34; }
+}
