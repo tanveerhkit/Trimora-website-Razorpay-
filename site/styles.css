@@ -1543,3 +1543,12 @@ body::before { opacity: .5; background: radial-gradient(circle at 10% 20%, rgba(
 .site-header-modern .logo-link::after { left: 0; transform: translate(0, -10px) scale(.78); }
 .site-header-modern .logo-link:hover::after, .site-header-modern .logo-link:focus-visible::after { transform: translate(0, 0) scale(1); }
 @media (max-width: 720px) { .site-header-modern .logo-link::after { left: -2px; } }
+
+
+/* Final overlap fix: reserve a clear visual lane beneath the enlarged logo */
+.logo-link::after { top: calc(100% + 5.5rem); z-index: 3; min-width: 214px; text-align: center; white-space: nowrap; }
+.site-header-modern .logo-link::after { left: 0; top: calc(100% + 5.5rem); }
+.site-header-modern .logo-link:hover::after, .site-header-modern .logo-link:focus-visible::after { transform: translate(0, 0) scale(1); }
+.site-footer-modern .logo-link::after { top: auto; bottom: calc(100% + 2.5rem); }
+.site-footer-modern .logo-link:hover::after, .site-footer-modern .logo-link:focus-visible::after { transform: translate(-50%, 0) scale(1); }
+@media (max-width: 720px) { .logo-link::after, .site-header-modern .logo-link::after { top: calc(100% + 4rem); min-width: 186px; font-size: .58rem; } .site-footer-modern .logo-link::after { top: auto; bottom: calc(100% + 2rem); } }
