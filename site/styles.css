@@ -1368,3 +1368,13 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -5; pointer-even
   .site-footer-modern .logo-img { height: 80px; }
   .logo-link { min-height: 72px; }
 }
+
+
+/* Google Play download CTA */
+.btn-play { background: #fffaf5; color: #173d35; border: 1px solid rgba(255,255,255,.34); box-shadow: 0 12px 28px rgba(0,0,0,.14); }
+.btn-play:hover { background: #f7c6b5; color: #4b263f; border-color: #f7c6b5; transform: translateY(-2px); }
+.play-badge-icon { display: inline-grid; width: 1.45rem; height: 1.45rem; place-items: center; border-radius: 50%; background: #173d35; color: #dceca8; font-size: .72rem; line-height: 1; }
+.footer-cta-actions { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
+.site-footer-modern .btn-play { background: #f7c6b5; color: #4b263f; border-color: rgba(247,198,181,.5); box-shadow: none; }
+.site-footer-modern .btn-play:hover { background: #fffaf5; color: #173d35; }
+@media (max-width: 720px) { .footer-cta-actions { width: 100%; align-items: flex-start; flex-direction: column; } .hero-actions .btn-play { width: auto; } }

@@ -864,7 +864,7 @@ window.TRIMORA_PAGES = {
               <span class="section-eyebrow section-eyebrow-light">Make grooming fit your day</span>
               <h2>Ready when you are.</h2>
             </div>
-            <a class="btn btn-primary" href="mailto:${c.supportEmail}?subject=I%20want%20to%20use%20Trimora">Start with Trimora ${icon("arrow", 18)}</a>
+            <div class="footer-cta-actions"><a class="btn btn-primary" href="mailto:${c.supportEmail}?subject=I%20want%20to%20use%20Trimora">Start with Trimora ${icon("arrow", 18)}</a><a class="btn btn-play btn-small" href="https://play.google.com/store/search?q=trimora&c=apps&hl=en_IN" target="_blank" rel="noopener noreferrer"><span class="play-badge-icon">▶</span> Google Play</a></div>
           </div>
           <div class="footer-grid">
             <div class="footer-brand">
@@ -915,7 +915,7 @@ window.TRIMORA_PAGES = {
               <div class="eyebrow-pill"><span></span> The smarter way to book grooming</div>
               <h1>Your grooming.<br><em>Your time.</em><br>Your choice.</h1>
               <p class="hero-lead">Discover local salons and barbers, explore services, and book an appointment that fits your day.</p>
-              <div class="hero-actions"><a href="#for-customers" class="btn btn-primary btn-large">Find your next appointment ${icon("arrow", 18)}</a><a href="#for-owners" class="text-link text-link-light">I run a salon ${icon("arrow", 16)}</a></div>
+              <div class="hero-actions"><a href="#for-customers" class="btn btn-primary btn-large">Find your next appointment ${icon("arrow", 18)}</a><a href="https://play.google.com/store/search?q=trimora&c=apps&hl=en_IN" class="btn btn-play btn-large" target="_blank" rel="noopener noreferrer"><span class="play-badge-icon">▶</span> Download on Google Play</a><a href="#for-owners" class="text-link text-link-light">I run a salon ${icon("arrow", 16)}</a></div>
               <div class="hero-meta"><span>${icon("check", 16)} Simple to explore</span><span>${icon("check", 16)} Built for local</span><span>${icon("check", 16)} Support when you need it</span></div>
             </div>
             <div class="hero-visual">${phoneMockup()}</div>
