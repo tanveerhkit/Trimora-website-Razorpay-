@@ -77,7 +77,8 @@
   // Navigate to a route
   function navigateTo(rawPath) {
     const path = appPath(rawPath);
-    const route = routes[path];
+    const isProjectHome = window.location.hostname.endsWith("github.io") && window.location.pathname.replace(/\/+$/, "") === PROJECT_BASE;
+    const route = isProjectHome ? routes["/"] : routes[path];
     const appContent = document.getElementById("app-content");
 
     // Update document head
