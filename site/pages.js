@@ -842,7 +842,6 @@ window.TRIMORA_PAGES = {
           <div class="header-actions">
             <a href="https://www.linkedin.com/company/trimora-technologies" class="header-link" target="_blank" rel="noopener noreferrer">Join Trimora</a>
             <a href="/contact" class="btn btn-small btn-light" data-link>Get support ${icon("arrow", 16)}</a>
-            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch theme"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span class="theme-toggle-label">Dark</span></button>
           </div>
           <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">${icon("menu")}</button>
         </div>
@@ -853,7 +852,6 @@ window.TRIMORA_PAGES = {
           <a href="/about" data-link>About Trimora</a>
           <a href="/contact" data-link>Contact support</a>
           <a href="https://www.linkedin.com/company/trimora-technologies" target="_blank" rel="noopener noreferrer">Join Trimora ${icon("arrow", 16)}</a>
-          <button class="theme-toggle theme-toggle-mobile" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch theme"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span class="theme-toggle-label">Dark mode</span></button>
         </div>
       </header>`;
   }
