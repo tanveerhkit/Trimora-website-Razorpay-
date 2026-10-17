@@ -24,8 +24,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare SPA fallback
-        run: cp site/index.html site/404.html
+      - name: Prepare SPA routes
+        run: |
+          # GitHub Pages serves unknown SPA paths through 404.html with an HTTP 404
+          # status. Google Play requires the policy URLs themselves to return 200.
+          # Provide real directory index files for every public route so crawlers
+          # receive HTTP 200 while the existing client-side router renders content.
+          for route in about contact privacy-policy terms refund-cancellation-policy service-fulfillment-policy account-deletion; do
+            mkdir -p "site/${route}"
+            cp site/index.html "site/${route}/index.html"
+          done
+          cp site/index.html site/404.html
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
