@@ -32,7 +32,13 @@ jobs:
           # receive HTTP 200 while the existing client-side router renders content.
           for route in about contact privacy-policy terms refund-cancellation-policy service-fulfillment-policy account-deletion; do
             mkdir -p "site/${route}"
-            cp site/index.html "site/${route}/index.html"
+            sed \
+              -e 's|href="assets/|href="../assets/|g' \
+              -e 's|href="styles.css|href="../styles.css|g' \
+              -e 's|src="config.js|src="../config.js|g' \
+              -e 's|src="pages.js|src="../pages.js|g' \
+              -e 's|src="app.js|src="../app.js|g' \
+              site/index.html > "site/${route}/index.html"
           done
           cp site/index.html site/404.html
 

@@ -63,6 +63,7 @@
       return "/";
     }
     if (path === "/404.html" || path.endsWith("/404.html")) return "/";
+    path = path.replace(/\/+$/, "") || "/";
     return path.startsWith("/") ? path : `/${path}`;
   }
 
